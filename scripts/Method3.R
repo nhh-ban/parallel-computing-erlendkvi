@@ -14,8 +14,6 @@ cores <- min(maxcores, parallel::detectCores())
 cl <- makeCluster(cores)
 registerDoParallel(cl)
 
-tic(paste0("Rewriting MTweedieTests, ", cores, " cores")) # Initiating timer
-
 simTweedieTest <-  
   function(N){ 
     t.test( 
@@ -50,5 +48,3 @@ for(i in 1:nrow(df)){
       M=df$M[i], 
       sig=.05) 
 } 
-
-toc(log = TRUE) # Ending timer

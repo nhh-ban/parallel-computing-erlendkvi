@@ -9,9 +9,6 @@ library(tweedie)
 library(tictoc)
 library(doParallel)
 
-# Pasting the solution from the homework
-tic(paste0("Parallel loop, ", cores, " cores")) # Taking the time
-
 simTweedieTest <-  
   function(N){ 
     t.test( 
@@ -51,5 +48,3 @@ df$share_reject <-
           }
 
 stopCluster(cl)
-
-toc(log = TRUE)

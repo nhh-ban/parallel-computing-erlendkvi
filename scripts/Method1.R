@@ -10,8 +10,6 @@ library(doParallel)
 
 # Copying the solution, but including elements from the 'tictoc' package
 
-tic("Regular loop") # Initiating timer
-
 simTweedieTest <-  
   function(N){ 
     t.test( 
@@ -38,24 +36,3 @@ for(i in 1:nrow(df)){
       M=df$M[i], 
       sig=.05) 
 } 
-
-toc(log = TRUE) # Ending timer
-
-# Printing the results/log
-printTicTocLog <-
-  function() {
-    tic.log() %>%
-      unlist %>%
-      tibble(logvals = .) %>%
-      separate(logvals,
-               sep = ":",
-               into = c("Function type", "log")) %>%
-      mutate(log = str_trim(log)) %>%
-      separate(log,
-               sep = " ",
-               into = c("Seconds"),
-               extra = "drop")
-  }
-
-printTicTocLog() %>%
-  knitr::kable()

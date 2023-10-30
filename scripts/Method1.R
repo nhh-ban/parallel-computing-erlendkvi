@@ -1,4 +1,4 @@
-#### Paralell Computing, Assignment - BAN400 ####
+#### Parallel Computing, Assignment - BAN400 ####
 
 ## Method 1: The same method as in the original assignment
 
@@ -7,9 +7,7 @@ library(tidyverse)
 library(tweedie)
 library(tictoc)
 
-# Copying the solution, but including elements from the tictoc package
-
-tic.clearlog() # Making sure the log is cleared
+# Copying the solution, but including elements from the 'tictoc' package
 
 tic("Method 1") # Initiating timer
 

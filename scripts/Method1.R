@@ -6,10 +6,11 @@
 library(tidyverse)
 library(tweedie)
 library(tictoc)
+library(doParallel)
 
 # Copying the solution, but including elements from the 'tictoc' package
 
-tic("Method 1") # Initiating timer
+tic("Regular loop") # Initiating timer
 
 simTweedieTest <-  
   function(N){ 

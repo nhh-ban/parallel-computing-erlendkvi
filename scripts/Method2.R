@@ -3,6 +3,13 @@
 ## Method 2: Parallel computing on lines 29-35 in the original 
 ## assignment solution.
 
+# Loading relevant packages
+library(tidyverse)
+library(tweedie)
+library(tictoc)
+library(doParallel)
+
+# Pasting the solution from the homework
 tic(paste0("Parallel loop, ", cores, " cores")) # Taking the time
 
 simTweedieTest <-  
